@@ -10,11 +10,12 @@ import {HomeComponent} from './common/home/home.component';
 import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './common/shared.module';
 import {UserAuthenticationService} from './common/user-authentication.service';
+import {UserDisplayShortenPipe} from './user-management/user-display-card/user-display-shorten.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent, UserDisplayShortenPipe
   ],
   imports: [
     BrowserModule,
@@ -22,7 +23,8 @@ import {UserAuthenticationService} from './common/user-authentication.service';
     FormsModule,
     HttpClientModule,
     SharedModule,
-    AppRoutingModule
+    AppRoutingModule,
+
   ],
   providers: [UserService, UserAuthenticationService],
   bootstrap: [AppComponent]

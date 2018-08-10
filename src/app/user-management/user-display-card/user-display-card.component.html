@@ -15,7 +15,7 @@
             [(ngModel)]="user.userEmail">
         </div>
         <div *ngIf="!editState">
-          <h5>{{user.userEmail}}</h5>
+          <h5>{{user.userEmail | uppercase}}</h5>
         </div>
         <div class="description">{{user.userDescription}}</div>
       </div>
